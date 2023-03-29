@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  kafka-producer:
+    container_name: kafka-producer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - kafka-shared
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9006:9000"
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
+
+networks:
+  kafka-shared:
+    name: kafka-shared

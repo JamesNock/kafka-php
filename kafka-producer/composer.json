@@ -1,0 +1,17 @@
+{
+    "name": "james/kafka",
+    "autoload": {
+        "psr-4": {
+            "James\\Kafka\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "James Nock",
+            "email": "james.nock@dawsonandrews.com"
+        }
+    ],
+    "require": {
+        "enqueue/rdkafka": "^0.10.8"
+    }
+}
